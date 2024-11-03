@@ -1,0 +1,192 @@
+/* Hoja de estilos */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------ CABECERA ------ */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 50%;
+}
+
+.logo {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo .skin {
+    color: #f78287;
+    margin-left: 20px;
+}
+
+.logo .planet {
+    color: #0099ff;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    flex-basis: auto;
+}
+
+.menu li a {
+    color: #3389c2;
+    text-decoration: none;
+}
+
+/* botón de hamburguesa */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+    /* Esconde el checkbox real */
+#menu-toggle {
+    display: none;
+}
+
+    /* Estilo del menú */
+nav .menu {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.submenu {
+    display: flex;
+    list-style-type: none;
+    top: 100%;
+}
+
+
+/* login, buscar y carrito compra */
+.contacto {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.contacto img {
+    width: 32px;
+    height: 25px;
+}
+
+
+/* ------ SECCIÓN CENTRAL ------ */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #e0f7fa;
+    padding: 40px;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    color: #00695c;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1rem;
+}
+
+.cta {
+    background-color: #f78287;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background: #00796b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* DISEÑO RESPONSIVE */
+
+/* Media query para pantallas entre 480px y 768px */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Media query para pantallas menores a 480px */
+@media screen and (max-width: 480px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border-top: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    /* Muestra el menú cuando el checkbox está marcado */
+    #menu-toggle:checked + .menu {
+        display: flex;
+    }
+}
